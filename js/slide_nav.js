@@ -12,7 +12,7 @@ function slideNav(){
 	var nava = document.getElementById("slide_nav");
 
 	if(nava.style.left === 'calc(100% + 200px)') {
-    nava.style.left = 'calc(100% - 200px)';
+    nava.style.left = '0px';
   } else {
     nava.style.left = 'calc(100% + 200px)';
   }

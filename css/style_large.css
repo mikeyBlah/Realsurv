@@ -3,11 +3,14 @@
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
-header, section, aside, footer, article, hrgoup{
-	display: block;
-}
+html {
+	scroll-behavior: smooth;
+  }
 body{
 	overflow-x:hidden;
+}
+header, section, aside, footer, article, hgroup{
+	display: block;
 }
 a{
 	text-decoration: none;
@@ -29,11 +32,6 @@ h2{
 	font-size: 1.4rem;
 	font-weight: 400;
 	text-transform: uppercase;
-}
-h2 a{
-	color:white;
-	font:700 20px 'Lato', sans-serif;
-	text-decoration:none;
 }
 h2 span{
 	color:#333333;
@@ -145,10 +143,10 @@ h5{
 .homeFocalTextCont{
 	background-color: #f39200;
 	width: 40%;
-	padding: 40px 30px 80px 30px;
+	padding: 60px 30px 80px 30px;
 }
 .homeFocalTextCont p{
-	padding: 40px 0;
+	padding: 40px 0 60px 0;
 	color: #FAFAFA;
 }
 .homeFocalImg{
@@ -158,7 +156,9 @@ h5{
 	background-position: center;
 }
 .homeFocalTextCont a{
-	padding: 6px 12px;
+	font-size: 1.2rem;
+	padding: 8px 16px;
+	text-transform: uppercase;
 	background-color: #333333;
 	border-radius: 50px;
 }
@@ -236,6 +236,7 @@ h5{
 }
 /*---------------------------------------------------->FOOTER<---------------------------------------------------->*/
 #main_foot{
+	position: relative;
 	background-color:#333;
 	width:100%;
 	padding: 80px 0;
@@ -264,27 +265,42 @@ h5{
 #copyWrap{
 	display: flex;
 	flex-direction: column;
+	max-width: 30%
 }
 .copy{
 	font-size: 0.8rem;
 }
 #foot_links{
-	padding:10px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 40%;
+	padding: 10px;
 }
 #foot_links li{
-	padding:2px;
-}
-#foot_social{
-	float:right;
-	padding:10px;
-}
-#foot_social li{
-	padding:5px;
-	display:inline-block;
+	width: 30%;
+	padding: 12px 0;
 }
 #foot_logo{
 	width:100px;
 	padding-bottom:20px;
+}
+.backTop{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: 0;
+	width: 80px;
+	height: inherit;
+	background: #444;
+	text-align: center;
+	color: #CCC;
+}
+#arrowBackTop{
+	cursor: pointer;
+	padding-bottom: 12px;
 }
 /*////////////CONTACT PAGE///////////*/
 

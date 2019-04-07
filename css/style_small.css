@@ -1,6 +1,7 @@
 *{
 	padding:0px;
 	margin:0px;
+	font-family: 'Open Sans', sans-serif;
 }
 header, section, aside, footer, article, hrgoup{
 	display:block;
@@ -11,48 +12,21 @@ body{
 }
 h1{
 	color:#FFFFFF;
-	font:700 28px 'Lato', sans-serif;
 	border-style: solid;
-	border-width: 20px 30px 20px 30px;
-	-moz-border-image: url(../img/border_test.svg) 20 30 20 30 repeat;
-	-webkit-border-image: url(../img/border_test.svg) 20 30 20 30 repeat;
-	-o-border-image: url(../img/border_test.svg) 20 30 20 30 repeat;
-	border-image: url(../img/border_test.svg) 20 30 20 30 repeat;
 	padding:10px;
 }
 h2{
 	color:white;
-	font:700 20px 'Lato', sans-serif;
 	border:4px solid orange;
 	border-radius:10px;
 	padding:10px;
-}
-h2 a{
-	color:white;
-	font:700 20px 'Lato', sans-serif;
-	text-decoration:none;
 }
 h2 span{
 	color:#333333;
 }
 h3{
 	color:orange;
-	font:700 20px 'Lato', sans-serif;
 	padding-bottom:10px;
-}
-h4{
-	color:#CCCCCC;
-	font:700 24px 'Lato', sans-serif;
-	padding:10px;
-	border:4px solid #444444;
-}
-h5{
-	color:#CCCCCC;
-	font:700 20px 'Lato', sans-serif;
-	padding:10px;
-}
-.clear{
-	clear:both;
 }
 #banner{
 	padding-top:5px;
@@ -78,22 +52,22 @@ h5{
 	display:none;
 }
 #slide_nav{
-	width:200px;
+	width:100%;
 	height:100%;
 	top:60px;
 	position:fixed;
-	background-color:rgba(0,0,0,0.8);
+	background-color: #333333;
 	border-left:1px solid rgba(255,255,255,0.5);
 	transition:all 0.6s;
 }
 #slide_nav li{
+	font-size: 1.2rem;
 	padding:20px;
 	list-style:none;
 	border-bottom:1px solid rgba(255,255,255,0.5);
 }
 #slide_nav a{
 	color:white;
-	font:700 16px 'Lato', sans-serif;
 	text-decoration:none;
 }
 .social_size{
