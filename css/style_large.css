@@ -41,20 +41,6 @@ h3{
 	font:700 28px 'Lato', sans-serif;
 	padding-bottom:10px;
 }
-h4{
-	color:#CCCCCC;
-	font:700 28px 'Lato', sans-serif;
-	margin-top:50px;
-	padding:50px;
-}
-h5{
-	color:#CCCCCC;
-	font:700 20px 'Lato', sans-serif;
-	padding:10px;
-}
-.clear{
-	clear:both;
-}
 #banner{
 	width:100%;
 	position:fixed;

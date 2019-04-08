@@ -1,22 +1,28 @@
-//Footer display this year
 window.onload = function() {
+//Variables
+const hamburgerIcon = document.querySelector('#show_nav_icon');
+const navi = document.querySelector("#slide_nav");
+
+
+//Footer display this year
 function displayDate() {
   var d = new Date();
   var y = d.getFullYear();
   document.getElementById("thisYear").innerHTML = y;
 }
 displayDate();
-}
-//SLIDE NAV
-function slideNav(){
-	var nava = document.getElementById("slide_nav");
 
-	if(nava.style.left === 'calc(100% + 200px)') {
-    nava.style.left = '0px';
+//SLIDE NAV
+hamburgerIcon.addEventListener("click", function(){
+	console.log('Clicked');
+	if(navi.style.left === 'calc(100% + 200px)') {
+		hamburgerIcon.classList.add('open');
+    navi.style.left = '0px';
   } else {
-    nava.style.left = 'calc(100% + 200px)';
+		navi.style.left = 'calc(100% + 200px)';
+		hamburgerIcon.classList.remove('open');
   }
-}
+});
 
 function show_pro_extend(){
 	var pro_01 = document.getElementById("pro_01_extend");
@@ -61,4 +67,5 @@ function show_pro_extend_03(){
 	btn_pro.style.backgroundImage = 'url(../img/plus.svg)';
   }
 
+}
 }
