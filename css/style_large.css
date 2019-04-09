@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
 }
 html {
 	scroll-behavior: smooth;
@@ -171,7 +172,7 @@ h3{
 }
 .image_box{
 	width:100%;
-	height: 400px;
+	height: 500px;
 }
 .overlay{
 	display: flex;
@@ -205,11 +206,7 @@ h3{
 	background-position:center center;
 }
 #box_02{
-	background: #FFFFFF url('../img/box_back.svg');
 	text-align:center;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:center center;
 	display: flex;
 	align-items: center;
 }
@@ -245,7 +242,7 @@ h3{
 }
 #main_foot_wrap p{
 	margin:0px auto;
-	color:#CCCCCC;
+	color:#CCC;
 	padding-top:10px;
 }
 #copyWrap{
@@ -257,6 +254,7 @@ h3{
 	font-size: 0.8rem;
 }
 #foot_links{
+	font-size: 1.2rem;
 	display: flex;
 	flex-wrap: wrap;
 	width: 40%;
@@ -265,6 +263,12 @@ h3{
 #foot_links li{
 	width: 30%;
 	padding: 12px 0;
+}
+#foot_links a{
+	color: #CCC;
+}
+#foot_links a:hover{
+	color: #FAFAFA;
 }
 #foot_logo{
 	width:100px;
@@ -282,11 +286,15 @@ h3{
 	height: inherit;
 	background: #444;
 	text-align: center;
+	font-size: 1.4rem;
 	color: #CCC;
 }
 #arrowBackTop{
 	cursor: pointer;
-	padding-bottom: 12px;
+	padding: 24px;
+	margin-bottom: 6px;
+	border-radius: 50px;
+	border: 3px solid #333;
 }
 /*////////////CONTACT PAGE///////////*/
 

@@ -1,5 +1,3 @@
-window.onload = function(){
-
 const footer = document.querySelector('#main_foot');
 const arrowCont = document.querySelector('.backTop');
 const arrow = document.querySelector('#arrowBackTop');
@@ -14,8 +12,4 @@ arrow.addEventListener("click", function(){
     window.scrollTo(0, 0);
 });
 
-
 getHeight();
-
-
-}
