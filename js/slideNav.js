@@ -1,4 +1,4 @@
-window.onload = function(){
+
 //Variables
 const hamburgerIcon = document.querySelector('#show_nav_icon');
 const navi = document.querySelector("#slide_nav");
@@ -67,5 +67,4 @@ function show_pro_extend_03(){
 	btn_pro.style.backgroundImage = 'url(../img/plus.svg)';
   }
 
-}
 }
