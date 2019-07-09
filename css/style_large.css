@@ -3,6 +3,7 @@
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
+	outline: none;
 }
 html {
 	scroll-behavior: smooth;
@@ -41,12 +42,12 @@ h3{
 	color: #FAFAFA;
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 6rem;
-	padding: 20px 0;
+	text-transform: uppercase;
 }
 #banner{
 	width:100%;
 	position:fixed;
-	background-color:#FFFFFF;
+	background-color:#FAFAFA;
 	box-shadow: 0 0 4px rgba(0,0,0,0.3);
 	z-index: 1;
 }
@@ -290,7 +291,19 @@ h3{
 	height: 60px;
 	cursor: pointer;
 }
+@keyframes arrowBounce {
+	0%   {top: -2px;}
+	25%  {top: -6px;}
+	50%  {top: 2px;}
+	100% {top: 0;}
+  }
+  .backTopInner:hover #arrowBackTop{
+	animation-name: arrowBounce;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+  }
 #arrowBackTop{
+	position: relative;
 	width: 25px;
 	height: 25px;
 }
@@ -356,43 +369,135 @@ h3{
 	width:100px;
 	padding-bottom:20px;
 }
-/*////////////CONTACT PAGE///////////*/
-
-#contact_wrap{
-	width:70%;
-	margin:0px auto;
-	height:100%;
-	padding-top:100px;
-	padding-bottom:140px;
+/*---------------------------------------------------->PROJECTS<---------------------------------------------------->*/
+.projectTileWrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
 }
-.contact_box{
-	width:180px;
-	height:180px;
-	margin:0px auto;
+.projectTile{
+	position: relative;
+	background: url(../img/box_02.jpg);
+	background-size: cover;
+	background-position: top;
+	height: 320px;
+	margin: 12px 0;
+	cursor: pointer;
 }
-.box_wrapp{
-	display:inline-block;
-	width:270px;
-	margin-top:120px;
+.projectTile:hover .tileOverlay{
+	background: rgba(0,0,0,0.5);
 }
-.contact_text{
-	font:500 16px 'Lato', sans-serif;
-	color:#CCCCCC;
-	padding:20px;
-	padding-bottom:40px;
+.tileOverlay{
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 24px;
+	background: rgba(0,0,0,0.2);
+	transition: all 1s;
 }
-.contact_text a{
-	text-decoration:none;
-	color:#CCCCCC;
+.tileHeader{
+	color:#FAFAFA;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	max-width: 50%;
+	text-align: right;
 }
-#phone_box{
-	background-image:url(../img/phone_back.svg);
+.grid1{
+	width: 100%;
+	position: relative;
+	background: url(../img/CaulfieldToDandenong01.jpg);
+	background-size: cover;
+	background-position: center;
 }
-#email_box{
-	background-image:url(../img/box.svg);
+.grid2{
+	width: calc(50% - 12px);
 }
-#address_box{
-	background-image:url(../img/address_back.svg);
+/*---------------------------------------------------->CONTACT<---------------------------------------------------->*/
+.contactCard{
+	position: relative;
+	flex: 1;
+	text-align: left;
+	padding: 20px;
+	background: #FFF;
+	margin: 10px;
+	box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+}
+#contactForm{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 80px;
+}
+.formInput{
+	margin: 12px 0;
+	padding: 12px;
+	color: #333;
+	border: none;
+	border: 1px solid #F39200;
+	resize: none;
+}
+.btnBack{
+	background: #333;
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	width: 50%;
+	overflow: hidden;
+}
+.formBtn{
+	height: 50px;
+	font-size: 1.2rem;
+	padding: 12px 24px;
+	width: 100%;
+	text-align: left;
+	padding: 0 20px;
+	color: #FAFAFA;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	background: transparent;
+}
+.formBtn::before{
+	content: "";
+	transition: all 0.5s;
+	position: absolute;
+	left: -25px;
+	top: 0;
+	bottom: 20px;
+	border-bottom: 50px solid #F39200;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 0;
+}
+.formBtn:hover:before{
+	width: calc(100% + 25px);
+}
+.formBtn::after{
+	content: "SEND";
+	position: relative;
+	z-index: 1;
+	color: #FAFAFA;
+}
+.contactCard p{
+	padding-bottom: 24px;
+}
+.boldish{
+	color: #333;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 3rem;
+	padding: 20px 0;
+}
+.contBold{
+	color: #333;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.8rem;
+	padding: 20px 0;
 }
 /*////////////---Universal---///////////*/
 
@@ -434,8 +539,12 @@ h3{
 	background: rgba(0,0,0,0.4);
 }
 .contentWrap{
+	display: flex;
 	width: 80%;
 	margin:0px auto;
 	height:100%;
-	padding: 40px 0;
+	padding: 80px 0 40px 0;
+}
+.companyTileWrap{
+	padding: 20px 0 40px 0;
 }
